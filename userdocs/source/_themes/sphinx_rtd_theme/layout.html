@@ -162,7 +162,7 @@
   <script type="text/javascript">
       jQuery(function () {
         SphinxRtdTheme.StickyNav.enable();
-        window.addEventListener("hashchange", function(){
+        function hashChange(){
 		var hash = document.location.hash;
 		$('.menu .current a').each(function(index, item){
 		    var href = item.getAttribute('href');
@@ -170,7 +170,9 @@
 		      $(item).toggleClass('current', href == hash);
 		    }
 		});
-	});
+	}
+        window.addEventListener("hashchange", hashChange);
+        hashChange();
       });
   </script>
 </body>
