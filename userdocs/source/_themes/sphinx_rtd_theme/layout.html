@@ -161,7 +161,16 @@
 	{% block footer %}{% endblock %}
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+        SphinxRtdTheme.StickyNav.enable();
+        window.addEventListener("hashchange", function(){
+		var hash = document.location.hash;
+		$('.menu .current a').each(function(index, item){
+		    var href = item.getAttribute('href');
+		    if(href){
+		      $(item).toggleClass('current', href == hash);
+		    }
+		});
+	});
       });
   </script>
 </body>
