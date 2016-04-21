@@ -348,8 +348,9 @@ input {
 	color: #fff;
 	border-left: 4px solid #262626;
 }
-.toctree-l2{
-	padding-left: 16px;
+.toctree-l2 a {
+    margin-left: 16px;
+    border: 0 !important;
 }
 .menu a{
  text-decoration: none;
