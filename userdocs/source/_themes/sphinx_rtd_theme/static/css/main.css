@@ -331,7 +331,26 @@ input {
 .menu .caption{
  margin: 6px 0 4px;
 }
-
+.menu .caption-text{
+	font-size: 12px;
+	text-transform: uppercase;
+	padding-left: 16px;
+	color: #fff;
+}
+.menu li{
+    border-top: 1px solid #595959;
+	border-bottom: 1px solid #595959;
+}
+.menu li + li{
+    border-top: 0;
+}
+.menu a.current{
+	color: #fff;
+	border-left: 4px solid #262626;
+}
+.toctree-l2{
+	padding-left: 16px;
+}
 .menu a{
  text-decoration: none;
 }
